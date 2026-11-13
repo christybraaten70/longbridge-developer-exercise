@@ -3,5 +3,6 @@
     <description>Users with the job function of Loan Officer.</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Loan Officer</label>
+    <permissionSets>Manage_Loan_Applications</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
