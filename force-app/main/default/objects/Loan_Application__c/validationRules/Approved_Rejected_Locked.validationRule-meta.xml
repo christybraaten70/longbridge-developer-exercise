@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Rejected_Locked</fullName>
+    <active>true</active>
+    <description>Approved/Rejected Loan applications are locked, except for Administrators and Integration Users.</description>
+    <errorConditionFormula>AND(
+   NOT(ISNEW()),
+   OR(
+    ISPICKVAL(PRIORVALUE(Status__c), &quot;Approved&quot;),
+    ISPICKVAL(PRIORVALUE(Status__c), &quot;Rejected&quot;)
+   ),
+   NOT($Permission.Override_Loan_Application_Lock)
+)</errorConditionFormula>
+    <errorMessage>This loan application has already been decisioned and cannot be modified.</errorMessage>
+</ValidationRule>
