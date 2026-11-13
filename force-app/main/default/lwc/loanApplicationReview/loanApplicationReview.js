@@ -108,28 +108,7 @@ export default class ApplicationReview extends LightningElement {
     handleStatusChange(event) {
         this.selectedStatus = event.detail.value;
         refreshApex(this.wiredAppsResult);
-    }  
-
-    /*
-    async handleRowAction(event) {
-        const actionName = event.detail.action.name;
-        const row = event.detail.row;
-
-        let newStatus = actionName === 'approve' ? 'Approved' : 'Rejected';
-
-        this.isLoading = true;
-        try {
-            await updateApplicationStatus({ recordId: row.Id, newStatus: newStatus });
-            this.showToast('Success', `Application ${newStatus.toLowerCase()} successfully.`, 'success');
-            await refreshApex(this.wiredAppsResult);
-        } catch (error) {
-            const message = error.body ? error.body.message : 'Unknown error occurred';
-            this.showToast('Error updating status', message, 'error');
-        } finally {
-            this.isLoading = false;
-        }
     }
-    */
 
     handleRowAction(event) {
         const actionName = event.detail.action.name;

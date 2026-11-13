@@ -112,7 +112,7 @@ public without sharing class LoanApplicationTriggerHandler {
         }
  
         if (!toUpdate.isEmpty()) {
-            update toUpdate;
+            Database.update(toUpdate, AccessLevel.SYSTEM_MODE);
         }
     }
  

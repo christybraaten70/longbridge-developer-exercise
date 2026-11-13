@@ -22,9 +22,9 @@ public with sharing class LoanApplicationController {
 
     @AuraEnabled
     public static void updateApplicationStatus(String recordId, String newStatus, String reason) {
-        Loan_Application__c app = [SELECT Id, Status__c FROM Loan_Application__c WHERE Id = :recordId LIMIT 1];
+        Loan_Application__c app = [SELECT Id FROM Loan_Application__c WHERE Id = :recordId LIMIT 1];
         app.Status__c = newStatus;
         app.Decision_Reason__c = reason;
-        update app;
+        update as user app;
     }
 }
