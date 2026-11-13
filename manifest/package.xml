@@ -49,7 +49,7 @@
     </types>
     <types>
         <members>Manage_Loan_Applications</members>
-        <members>Override_Loan_Applications_Lock</members>
+        <members>Override_Loan_Application_Lock</members>
         <name>PermissionSet</name>
     </types>
     <types>

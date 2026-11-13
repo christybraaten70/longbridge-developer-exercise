@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Override_Loan_Application_Lock</name>
+    </customPermissions>
+    <description>Assign to users who should be able to modify a Loan Application after it i has been decisioned.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Override Loan Application Lock</label>
+</PermissionSet>

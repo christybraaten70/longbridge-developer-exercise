@@ -46,14 +46,18 @@ Lightning Web Component (loanApplicationReview) Decisions:
    - Icons to visually show the status of a loan application when looking at the All Applications or All Pending status filters.
    - Allow loading of more than 200 loan applications on the Loan Application Review screen.  Pagination would work nicely here so we see the most recent first but the user can optionally click "Next" to get to older applications.
    - Dynamically pull in the Loan Application Status values from the Status picklist values, so if they change the LWC does not have to be updated.
+   - Ability to navigate a Loan Application record from the Loan Application Review screen.
    - Highlighting rows or showing additional information when hovering over a loan application line item.
-   - More complete documentation on how to install from this repo.
+   - Implementation of record pages, including additional the Approve/Reject actions at the record level, rather just from the Loan Application Review screen.
    - Better documentation and consistency of comments on apex classes and test classes.
    - The web service callout was intentionally left out due to time constraints.  While I could include code, I felt it better to explain my thought process than to include code that I didn't have time to fully test for accuracy.
    - More thought around record ownership and when to assign Loan Applications to a Loan Officer.
-   - Instructions and method to seed sample data when installing the application.
    - Storing thresholds in Custom Metadata to ensure Loan Officers cannot approve more than a configurable amount.  We could use Custom Metadata as we can use this in validations rules.
    - Better Error Logs.  Creation of an Error Log object that stores valueable information about callouts and errors.  Also, building in a notification to System Administrators when certain errors occur is a good way to timely notify Administrators of issues.
+   - Implementation of a TestFactory class to aid in testing.
+   - Implementation of DAO classes to modularlize queries and dmls.
+   - More complete documentation on how to install from this repo.
+   - Instructions and method to seed sample data when installing the application.
    - Better testing and completeness of solution!
 
 
